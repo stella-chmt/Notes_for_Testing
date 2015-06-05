@@ -160,8 +160,66 @@ Traceback (most recent call last):
 WebDriverException: Message: u'An unknown server-side error occurred while processing the command.'
 ```
 这种一般是在动作之间的等待时间不够长，再次获取控件时没有找到之类，可以通过加上动作之间的等待解决。
+####3.6.2 使用appium1.3.7在真机上跑case遇到的error
+首先如何使用真机跑case可以参考<http://testerhome.com/topics/1377>
+如果已经满足了  
+
+* UDID正确，是真机的 UDID(20+ 字符串，可在xcode-windows-devices中查看,indentifier就是)
+![Get UDID](../images/device-udid.png)
+* 启动server时指定真机的udid和app的bundleid
+
+```
+appium -U 0f82ca794a773926fe7160359043f3c529724dda --app com.dianping.dpscope
+```
+  app的bundleid可以在xcode-target里面查看
+![Get BundleID](../images/app-bundleid.png)
+
+* 直接使用Instruments能在真机上运行UIAutomation脚本(有些情况连xcode的instruments都不能在真机上调试，那更别谈appium了)
+* 确保运行Appium脚本前，Instruments没有启动过(看看有没有 instruments 的进程)
+
+发现还是报错
+
+```python
+from appium import webdriver
+driver =webdriver.Remote(command_executor='http://127.0.0.1:4723/wd/hub',desired_capabilities={'deviceName':'','platformName': 'iOS',})
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "build/bdist.macosx-10.9-intel/egg/appium/webdriver/webdriver.py", line 35, in __init__
+  File "/Library/Python/2.7/site-packages/selenium-2.42.1-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 73, in __init__
+    self.start_session(desired_capabilities, browser_profile)
+  File "/Library/Python/2.7/site-packages/selenium-2.42.1-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 121, in start_session
+    'desiredCapabilities': desired_capabilities,
+  File "/Library/Python/2.7/site-packages/selenium-2.42.1-py2.7.egg/selenium/webdriver/remote/webdriver.py", line 173, in execute
+    self.error_handler.check_response(response)
+  File "/Library/Python/2.7/site-packages/selenium-2.42.1-py2.7.egg/selenium/webdriver/remote/errorhandler.py", line 164, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: u'A new session could not be created. (Original error: Could not initialize ideviceinstaller; make sure it is installed and works on your system)'
+```
+appium server端出现的错误日志
+
+```
+info: [debug] Creating iDevice object with udid 0f82ca794a773926fe7160359043f3c529724dda
+info: [debug] Couldn't find ideviceinstaller, trying built-in at /usr/local/lib/node_modules/appium/build/libimobiledevice-macosx/ideviceinstaller
+error: Could not initialize ideviceinstaller; make sure it is installed and works on your system
+info: [debug] Cleaning up appium session
+error: Failed to start an Appium session, err was: Error: Could not initialize ideviceinstaller; make sure it is installed and works on your system
+info: [debug] Error: Could not initialize ideviceinstaller; make sure it is installed and works on your system
+    at IOS.getIDeviceObj (/usr/local/lib/node_modules/appium/lib/devices/ios/ios.js:906:13)
+    at IOS.installToRealDevice (/usr/local/lib/node_modules/appium/lib/devices/ios/ios.js:853:32)
+    at /usr/local/lib/node_modules/appium/node_modules/async/lib/async.js:610:21
+    at /usr/local/lib/node_modules/appium/node_modules/async/lib/async.js:249:17
+    at iterate (/usr/local/lib/node_modules/appium/node_modules/async/lib/async.js:149:13)
+    at /usr/local/lib/node_modules/appium/node_modules/async/lib/async.js:160:25
+    at /usr/local/lib/node_modules/appium/node_modules/async/lib/async.js:251:21
+    at /usr/local/lib/node_modules/appium/node_modules/async/lib/async.js:615:34
+    at IOS.prelaunchSimulator (/usr/local/lib/node_modules/appium/lib/devices/ios/ios.js:1189:12)
+    at /usr/local/lib/node_modules/appium/node_modules/async/lib/async.js:610:21
+info: [debug] Responding to client with error: {"status":33,"value":{"message":"A new session could not be created. (Original error: Could not initialize ideviceinstaller; make sure it is installed and works on your system)","origValue":"Could not initialize ideviceinstaller; make sure it is installed and works on your system"},"sessionId":null}
+```
+那么，如果你使用的是1.3.7版本Appium,这是Appium的bug,需要替换/usr/local/lib/node_modules/appium/node_modules/node-idevice为低版本如1.3.3的  
+参考<http://blog.csdn.net/xiaobai20131118/article/details/44651983>
 ##参考资料
 1.官方网站<http://appium.io>  
-2.官方sample<https://github.com/appium/sample-code/blob/master/sample-code>
-3.TesterHome论坛<http://testerhome.com>
-4.博客<http://www.cnblogs.com/tangdongchu/tag/appium/>  
+2.官方sample<https://github.com/appium/sample-code/blob/master/sample-code>  
+3.TesterHome论坛<http://testerhome.com>  
+4.博客<http://www.cnblogs.com/tangdongchu/tag/appium/>    
