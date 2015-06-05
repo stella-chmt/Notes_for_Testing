@@ -164,18 +164,18 @@ WebDriverException: Message: u'An unknown server-side error occurred while proce
 首先如何使用真机跑case可以参考<http://testerhome.com/topics/1377>
 如果已经满足了  
 
-* UDID正确，是真机的 UDID(20+ 字符串，可在xcode-windows-devices中查看,indentifier就是)
+* UDID正确，是真机的 UDID(20+字符串，可在xcode-windows-devices中查看,Identifier就是)
 ![Get UDID](../images/device-udid.png)
-* 启动server时指定真机的udid和app的bundleid
+* 启动server时指定真机的UDID和App的BundleId
 
 ```
 appium -U 0f82ca794a773926fe7160359043f3c529724dda --app com.dianping.dpscope
 ```
-  app的bundleid可以在xcode-target里面查看
+  APP的BundleId可以在xcode-target里面查看
 ![Get BundleID](../images/app-bundleid.png)
 
 * 直接使用Instruments能在真机上运行UIAutomation脚本(有些情况连xcode的instruments都不能在真机上调试，那更别谈appium了)
-* 确保运行Appium脚本前，Instruments没有启动过(看看有没有 instruments 的进程)
+* 确保运行Appium脚本前，Instruments没有启动过(看看有没有 Instruments的进程)
 
 发现还是报错
 
@@ -216,7 +216,7 @@ info: [debug] Error: Could not initialize ideviceinstaller; make sure it is inst
     at /usr/local/lib/node_modules/appium/node_modules/async/lib/async.js:610:21
 info: [debug] Responding to client with error: {"status":33,"value":{"message":"A new session could not be created. (Original error: Could not initialize ideviceinstaller; make sure it is installed and works on your system)","origValue":"Could not initialize ideviceinstaller; make sure it is installed and works on your system"},"sessionId":null}
 ```
-那么，如果你使用的是1.3.7版本Appium,这是Appium的bug,需要替换/usr/local/lib/node_modules/appium/node_modules/node-idevice为低版本如1.3.3的  
+那么，如果你使用的是1.3.7版本Appium,这是Appium的bug,需要替换/usr/local/lib/node_modules/appium/node_modules/node-idevice为低版本如1.3.3的(在attaches中附有)  
 参考<http://blog.csdn.net/xiaobai20131118/article/details/44651983>
 ##参考资料
 1.官方网站<http://appium.io>  
