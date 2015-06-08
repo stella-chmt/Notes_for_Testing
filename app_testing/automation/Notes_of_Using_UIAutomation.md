@@ -1,5 +1,5 @@
 #Notes of Using UIAutomation
-*Authored By mengting.chen*
+*Written By mengting.chen*
 
 此文记录如何以Xcode自带的Recipes工程为例，来简单的使用UIAutomation(一个用java script写IOS自动化脚本的框架)
 

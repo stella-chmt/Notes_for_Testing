@@ -1,5 +1,5 @@
 #Notes of Using Appium&Python-Client（Mainly For IOS)
-*Authored By mengting.chen*
+*Written By mengting.chen*
 ##1 一些官方文档参考点
 ###1.1 获取需要的.app  
 利用xcode编译获取跑case需要的.app：
@@ -10,7 +10,7 @@
 <http://appium.io/slate/en/master/?python#known-issues>
 ##2 学习一些示例
 ###2.1 官方示例
-[Appium 官方Sample Code]("https://github.com/appium/sample-code/blob/master/sample-code/examples/python/")
+[Appium 官方Sample Code](https://github.com/appium/sample-code/blob/master/sample-code/examples/python/)
 ####2.1.1 通过sample-code中的ios脚本学习如何获取IOS客户端控件和控件属性
 2.1.1.1 获取控件对象
 
@@ -98,9 +98,9 @@ self.assertTrue(os.path.isfile("foo.png"))
 ```
 更多可以参考[Testhome上面一篇帖子]("http://testerhome.com/topics/2593")
 ###2.2 Testerhome上的示例
-通过Testhome这篇帖子可以学习一些关于[控件获取异常的处理]("http://testerhome.com/topics/201")，这里也有关于截图对比的实现
+通过Testhome这篇帖子可以学习一些关于[控件获取异常的处理](http://testerhome.com/topics/201)，这里也有关于截图对比的实现
 ###2.3 一个Android示例
-[丁媛&唐东初整理的一篇Android上使用Appium写点评APP脚本的博客（包含安装相关软件、如何查找app控件、一个简单脚本示例)]("http://www.cnblogs.com/tangdongchu/p/4432808.html")
+[丁媛&唐东初整理的一篇Android上使用Appium写点评APP脚本的博客（包含安装相关软件、如何查找app控件、一个简单脚本示例)](http://www.cnblogs.com/tangdongchu/p/4432808.html)
 ##3 实战Appium-Python-IOS脚本中遇到的问题与解决
 ###3.1 端口导致的*connection refused*
 一般使用

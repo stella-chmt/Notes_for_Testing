@@ -1,13 +1,13 @@
 # Appium Installation Notes On Mac
-*Authored By mengting.chen*
+*Written By mengting.chen*
 ##**1 下载安装appium**
 
 ###1.1 通过客户端安装:
 
 下载一个appium.dmg 双击安装即可,如果不能安装，在设置－安全与隐私－通用 里面点左下角的锁解锁，然后改为允许从任何来源下载的应用程序
 
-[官方下载]("http://appium.io/")  
-[国内下载（推荐）]("http://pan.baidu.com/s/1jGvAISu")
+[官方下载](http://appium.io/)  
+[国内下载（推荐）](http://pan.baidu.com/s/1jGvAISu)
 
 ###1.2 通过命令行安装：
 
