@@ -1,4 +1,4 @@
-#IOS自动化中如何获取APP页面元素信息
+#iOS自动化中如何获取APP页面元素信息
 *Written By mengting.chen*
 ##1 用Appium客户端的Inspector工具
 使用方法可以参考[文档](http://liontree.github.io/testing/2014/05/31/ios-uiautomation-appium-record/)  

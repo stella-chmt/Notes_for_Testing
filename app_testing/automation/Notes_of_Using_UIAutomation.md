@@ -1,7 +1,7 @@
 #Notes of Using UIAutomation
 *Written By mengting.chen*
 
-此文记录如何以Xcode自带的Recipes工程为例，来简单的使用UIAutomation(一个用java script写IOS自动化脚本的框架)
+此文记录如何以Xcode自带的Recipes工程为例，来简单的使用UIAutomation(一个用java script写iOS自动化脚本的框架)
 
 首先在xcode中search&download此工程，在help-search中搜索recipes，打开帮助文档，对应页面选 Open Project
 第二次搜索可以看到：
@@ -109,7 +109,7 @@ UIATarget.localTarget().pinchCloseFromToForDuration({x:20, y:200}, {x:300, y:200
 * script view和editor log view没法一齐展示
 * editor log无法清空，调试很不方便
 * 跑脚本时，如果模拟器里面没有把对应的app开起来或者找不到对应的控件，有时不会报错，但是脚本也不执行
-* dragInsideWithOptions对ios7不好使
+* dragInsideWithOptions对iOS7不好使
 * 组织测试用例不太方便，也没有assert之类的，都靠logFail、logPass
 
 
@@ -144,7 +144,7 @@ target.shake();
 ```
 ###5.5)等待
 
-在页面和页面之间甚至动作和动作之间需要一定的等待时间，如脚本中用到的delay(1)。等待固定时间对于需要请求网络的情况不太好，可以利用ios对页面加载需要等待的两种处理方式：
+在页面和页面之间甚至动作和动作之间需要一定的等待时间，如脚本中用到的delay(1)。等待固定时间对于需要请求网络的情况不太好，可以利用iOS对页面加载需要等待的两种处理方式：
 
 * 系统级别的网络加载标识。在网络信号右侧，页面有网络加载时，带动态效果的这个标识就会出现，网络请求完毕会自动消失；
 * 应用级别的等待提示。有网络请求或者大量文件读写需要用户等待时，开发者应该在应用程序中显示ActivityIndicator，提示用户此时需要等待。 

@@ -59,9 +59,9 @@ npm install –g appium
 sudo pip install Appium-Python-Client
 ```
 ##3 对模拟器的要求
-* 1.3.3的appium最多只支持ios7.1的simulator，xcode 6 默认都是ios8的simulator，所以需要额外去下载模拟器  
+* 1.3.3的appium最多只支持iOS7.1的simulator，xcode 6 默认都是iOS8的simulator，所以需要额外去下载模拟器  
 X-Code->Prefrences-> Downloads componants  
-里面可以下载ios7.1 simulator
+里面可以下载iOS7.1 simulator
 
 * appium跑4.2之前的android模拟器跑不起来  
 >Android devices before version 4.2 (API Level 17) do not have Google's UiAutomator framework installed. This is what Appium uses to perform the automation behaviors on the device. 

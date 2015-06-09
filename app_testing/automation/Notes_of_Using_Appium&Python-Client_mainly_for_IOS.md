@@ -1,4 +1,4 @@
-#Notes of Using Appium&Python-Client（Mainly For IOS)
+#Notes of Using Appium&Python-Client（Mainly For iOS)
 *Written By mengting.chen*
 ##1 一些官方文档参考点
 ###1.1 获取需要的.app  
@@ -11,7 +11,7 @@
 ##2 学习一些示例
 ###2.1 官方示例
 [Appium 官方Sample Code](https://github.com/appium/sample-code/blob/master/sample-code/examples/python/)
-####2.1.1 通过sample-code中的ios脚本学习如何获取IOS客户端控件和控件属性
+####2.1.1 通过sample-code中的iOS脚本学习如何获取iOS客户端控件和控件属性
 2.1.1.1 获取控件对象
 
 >以下来自sample-code/examples/python/ios_simple.py
@@ -47,7 +47,7 @@ driver.find_elements_by_class_name("UIATableCell")[2].location['x']
 #获取大小
 driver.find_element_by_class_name("UIATableView").size
 ```
-####2.1.2 通过sample-code中的ios脚本学习获取IOS客户端控件常用操作
+####2.1.2 通过sample-code中的iOS脚本学习获取iOS客户端控件常用操作
 2.1.2.1 点击、滑动、输入
 >以下来自sample-code/examples/python/ios_complex.py
 
@@ -81,7 +81,7 @@ driver.get_screenshot_as_base64()
 //截屏并保存为文件，返回True or false
 driver.get_screenshot_as_file("foo.png")  
 ```
-####2.1.3 通过sample-code中的ios脚本学习python的unittest中常用assert
+####2.1.3 通过sample-code中的iOS脚本学习python的unittest中常用assert
 >以下来自sample-code/examples/python/ios_complex.py
 
 ```python
@@ -101,7 +101,7 @@ self.assertTrue(os.path.isfile("foo.png"))
 通过Testhome这篇帖子可以学习一些关于[控件获取异常的处理](http://testerhome.com/topics/201)，这里也有关于截图对比的实现
 ###2.3 一个Android示例
 [丁媛&唐东初整理的一篇Android上使用Appium写点评APP脚本的博客（包含安装相关软件、如何查找app控件、一个简单脚本示例)](http://www.cnblogs.com/tangdongchu/p/4432808.html)
-##3 实战Appium-Python-IOS脚本中遇到的问题与解决
+##3 实战Appium-Python-iOS脚本中遇到的问题与解决
 ###3.1 端口导致的*connection refused*
 一般使用
 ```
@@ -125,7 +125,7 @@ for i in range(8):
                 end_x=200, end_y=150, duration=500)
 	time.sleep(2)
 ```            
-另：swipe在xcode5+ios7上是不生效的，详见
+另：swipe在xcode5+iOS7上是不生效的，详见
 <http://stackoverflow.com/questions/18792965/uiautomations-draginsidewithoptions-has-no-effect-on-ios7-simulator>
 <https://github.com/appium/appium/issues/1296>
 ###3.5 进入点评APP商户列表页后无法正确获取各商户控件的属性
