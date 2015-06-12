@@ -24,7 +24,7 @@ driver.find_element_by_ios_uiautomation('.elements()[3]').text
 #通过element的Name属性获取，需要name唯一
 driver.find_element_by_name('TextField1')
 #通过element的label属性获取，需要label唯一
-driver.find_element_by_accessibility_id('ComputeSumButton').click()
+driver.find_element_by_id('ComputeSumButton').click()
 #通过控件类名获取，结果是list
 driver.find_elements_by_class_name('UIAButton')
 
@@ -218,6 +218,20 @@ info: [debug] Responding to client with error: {"status":33,"value":{"message":"
 ```
 那么，如果你使用的是1.3.7版本Appium,这是Appium的bug,需要替换/usr/local/lib/node_modules/appium/node_modules/node-idevice为低版本如1.3.3的(在attaches中附有)  
 参考<http://blog.csdn.net/xiaobai20131118/article/details/44651983>
+###3.7 使用Unittest时停止不同test函数之间reset的方法
+可以参考Testhome上的一篇[帖子](http://testerhome.com/topics/2616)
+在启动appium时加上`--no-reset`例如在每个TestClass中的TestLoader写成如下：
+
+```python
+if __name__ == '__main__':
+    appiumServer = subprocess.Popen(
+        "appium --no-reset --log-level error:error",shell=True)
+    time.sleep(2)
+    suite = unittest.TestLoader().loadTestsFromTestCase(NearbyShopListTest)
+    unittest.TextTestRunner(verbosity=2).run(suite)
+    os.system("ps -ef | grep appium |"
+              " awk '{print $2}' |xargs  kill {} 2>/dev/null")
+```
 ##参考资料
 1.官方网站<http://appium.io>  
 2.官方sample<https://github.com/appium/sample-code/blob/master/sample-code>  
