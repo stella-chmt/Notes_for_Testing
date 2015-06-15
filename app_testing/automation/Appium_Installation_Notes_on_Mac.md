@@ -37,7 +37,7 @@ sudo curl -L https://npmjs.org/install.sh | sh
 
 ```shell
 npm install –g appium(千万不要加sudo)
-npm --registry http://registry.cnpmjs.org install -g appium (推荐这种,npm的国内镜像)
+npm --registry http://registry.npm.taobao.org install -g appium (推荐这种,npm的国内镜像)
 ```
 **注意**：如果之前使用sudo npm install -g appium，会发现
 
