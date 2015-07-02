@@ -96,6 +96,9 @@ self.assertEqual(18, len(rows))
 #boolean校验
 self.assertTrue(os.path.isfile("foo.png"))
 ```
+####2.1.4 执行指定的test_method
+![run_certain_test_case_in_python_unittest](../images/run_certain_test_case_in_python_unittest.jpg)
+
 更多可以参考[Testhome上面一篇帖子]("http://testerhome.com/topics/2593")
 ###2.2 Testerhome上的示例
 通过Testhome这篇帖子可以学习一些关于[控件获取异常的处理](http://testerhome.com/topics/201)，这里也有关于截图对比的实现
