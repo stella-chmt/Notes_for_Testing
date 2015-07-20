@@ -48,9 +48,10 @@ error: Appium will not work if used or installed with sudo. Please rerun/install
 此时只能重装node 、 appium
 
 ```shell
-brew uninstall nodebrew install node
+brew uninstall node
+brew install node
 sudo chown -R mengting ~/.npm
-sudo chown -R mengting /usr/local/lib/node_modulesnpm install -g appium
+sudo chown -R mengting /usr/local/lib/node_modules
 npm install –g appium
 ```
 

@@ -219,7 +219,7 @@ info: [debug] Error: Could not initialize ideviceinstaller; make sure it is inst
     at /usr/local/lib/node_modules/appium/node_modules/async/lib/async.js:610:21
 info: [debug] Responding to client with error: {"status":33,"value":{"message":"A new session could not be created. (Original error: Could not initialize ideviceinstaller; make sure it is installed and works on your system)","origValue":"Could not initialize ideviceinstaller; make sure it is installed and works on your system"},"sessionId":null}
 ```
-那么，如果你使用的是1.3.7版本Appium,这是Appium的bug,需要替换/usr/local/lib/node_modules/appium/node_modules/node-idevice为低版本如1.3.3的(在attaches中附有)  
+那么，如果你使用的是1.3.7版本Appium,这是Appium的bug,需要替换`/usr/local/lib/node_modules/appium/node_modules/node-idevice`为低版本如1.3.3的(在attaches中附有)  
 参考<http://blog.csdn.net/xiaobai20131118/article/details/44651983>
 ###3.7 使用Unittest时停止不同test函数之间reset的方法
 可以参考Testhome上的一篇[帖子](http://testerhome.com/topics/2616)
