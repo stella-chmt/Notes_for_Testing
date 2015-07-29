@@ -9,7 +9,7 @@
 [官方下载](http://appium.io/)  
 [国内下载（推荐）](http://pan.baidu.com/s/1jGvAISu)
 
-###1.2 通过命令行安装：
+###1.2 通过命令行从NPM安装：
 
 1.2.1 由于Appium是使用nodejs实现的，所以先装node
 
@@ -54,7 +54,10 @@ sudo chown -R mengting ~/.npm
 sudo chown -R mengting /usr/local/lib/node_modules
 npm install –g appium
 ```
-
+###1.2.3 从Github利用源码安装
+```shell
+REPO=”appium/appium.git”git clone https://github.com/$REPOcd appium && ./reset.shnode .
+```
 ##2 下载对应语言需要的appium-client
 ```shell
 sudo pip install Appium-Python-Client
