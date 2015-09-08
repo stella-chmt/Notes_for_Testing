@@ -171,4 +171,8 @@ iOS设备的两种orientation: **portrait**（竖屏）、**landscape**（横屏
 
 
 ##参考文档
-###1 [苹果官方文档](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html)
+###1 [苹果官方文档](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html) [中文版](http://isux.tencent.com/ios8-human-interface-guidelines.html)
+###2 [Android Design Principles（实际上是Android 4.4设计规范）](http://developer.android.com/design/get-started/principles.html) [中文版](http://www.apkbus.com/design/get-started/principles.html)
+ 
+[Android Material Design（实际上是Android 5设计规范）]
+(http://www.google.com/design/spec/material-design/introduction.html) [中文版](http://wiki.jikexueyuan.com/project/material-design/)
