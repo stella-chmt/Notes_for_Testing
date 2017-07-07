@@ -1,15 +1,15 @@
 # Appium Installation Notes On Mac
 *Written By mengting.chen*
-##**1 下载安装appium**
+## **1 下载安装appium**
 
-###1.1 通过客户端安装:
+### 1.1 通过客户端安装:
 
 下载一个appium.dmg 双击安装即可,如果不能安装，在设置－安全与隐私－通用 里面点左下角的锁解锁，然后改为允许从任何来源下载的应用程序
 
 [官方下载](http://appium.io/)  
 [国内下载（推荐）](http://pan.baidu.com/s/1jGvAISu)
 
-###1.2 通过命令行从NPM安装：
+### 1.2 通过命令行从NPM安装：
 
 1.2.1 由于Appium是使用nodejs实现的，所以先装node
 
@@ -54,15 +54,18 @@ sudo chown -R mengting ~/.npm
 sudo chown -R mengting /usr/local/lib/node_modules
 npm install –g appium
 ```
-###1.2.3 从Github利用源码安装
+### 1.2.3 从Github利用源码安装
 ```shell
-REPO=”appium/appium.git”git clone https://github.com/$REPOcd appium && ./reset.shnode .
+REPO=”appium/appium.git”
+git clone https://github.com/$REPO
+cd appium && ./reset.sh
+node .
 ```
-##2 下载对应语言需要的appium-client
+## 2 下载对应语言需要的appium-client
 ```shell
 sudo pip install Appium-Python-Client
 ```
-##3 对模拟器的要求
+## 3 对模拟器的要求
 * 1.3.3的appium最多只支持iOS7.1的simulator，xcode 6 默认都是iOS8的simulator，所以需要额外去下载模拟器  
 X-Code->Prefrences-> Downloads componants  
 里面可以下载iOS7.1 simulator
@@ -70,12 +73,12 @@ X-Code->Prefrences-> Downloads componants
 * appium跑4.2之前的android模拟器跑不起来  
 >Android devices before version 4.2 (API Level 17) do not have Google's UiAutomator framework installed. This is what Appium uses to perform the automation behaviors on the device. 
 
-##4 模拟器的键盘
+## 4 模拟器的键盘
 * 如果case里面要用到键盘，xcode6里面需要把模拟器对应的软键盘调出来
 
 >If you’re on Xcode 6, you need to launch each simulator you intend to use with appium in advance, and change the default to actually show the soft keyboard if you want sendKeys to work. You can do this by clicking on any textfield and hitting command-K until you notice the soft keyboard show up.
 
-##参考资料
+## 参考资料
 1.官方网站<http://appium.io>  
 2.博客<http://www.cnblogs.com/tangdongchu/tag/appium/>   
 3.stackoverflow上的问题解答<http://stackoverflow.com/questions/18923191/npm-install-fails>
