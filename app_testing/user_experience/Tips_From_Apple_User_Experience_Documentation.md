@@ -1,6 +1,6 @@
-#Tips From Apple's User Experience Documentation - UI Design Basics
+# Tips From Apple's User Experience Documentation - UI Design Basics
 
-##1 Designing for iOS
+## 1 Designing for iOS
 >* Whether you’re redesigning an older app or creating a new one, consider approaching the job in this way:  
 * First, look past the UI to the app’s core functionality and affirm its relevance.  
 * Next, use the themes of iOS to inform the design of the UI and the user experience. Add details and embellishments with care and never gratuitously.  
@@ -8,13 +8,13 @@
 * Throughout the process, be prepared to ***defy precedent***, ***question assumptions***, and let a ***focus on content*** and functionality motivate every design decision.
 
 个人认为最有道理的：确保UI和核心功能的相关性，不要毫无理由的添加细节和装饰，保证在多款设备上可用性，永远记得内容是最重要的。
-###1.1 Defer to Content
+### 1.1 Defer to Content
 以iOS自带的Weather为例，说明可以使用整个屏幕来贡献内容；以Map为例说明一些阴影、标注等等UI应该是辅助，不要抢占**content**的重要性；以上滑屏幕出现的控制中心为例说明透明的UI可以不抢占整个屏幕。
-###1.2 Provide Clarity
+### 1.2 Provide Clarity
 以Messages为例说明[negative space](https://en.wikipedia.org/wiki/Negative_space)的使用可以让APP显得更简洁，内容更突出；以Notes为例说明如何利用颜色达到简洁的效果;无论使用系统字体还是自定义字体，都要注意使用Dynamic Type来适配用户自定义的字号；以Contacts为例说明无边框Button的使用。
-###1.3 Use Depth to Communicate
+### 1.3 Use Depth to Communicate
 以Calendar、Notes里多条Note、主界面上的文件夹展示等说明利用多个Layer来表达一种层级关系。用户借此知道如何交互。
-##2 [iOS App Anatomy](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Anatomy.html#//apple_ref/doc/uid/TP40006556-CH24-SW1)
+## 2 [iOS App Anatomy](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Anatomy.html#//apple_ref/doc/uid/TP40006556-CH24-SW1)
 这一块主要讲例如Navigation bar、Tab bar、Alert、Map view、Toolbar button等等iOS APP中常用的组件。组件一般分成4类：
 >* **Bars**. Bars contain contextual information that tells users where they are and controls that help users navigate or initiate actions.  
 * **Content views**(such as collection views and table views). Content views contain app-specific content and can enable behaviors such as scrolling, insertion, deletion, and rearrangement of items.  
@@ -27,10 +27,10 @@
 ![Relationship Between Controller and Views](../images/Relationship_Between_Controller_and_Views.jpg)
 更多可以参看<https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Bars.html#//apple_ref/doc/uid/TP40006556-CH12-SW1>
 
-##3 [Adaptivity and Layout](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/LayoutandAppearance.html#//apple_ref/doc/uid/TP40006556-CH54-SW1)
-###3.1 Build In Adaptivity
+## 3 [Adaptivity and Layout](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/LayoutandAppearance.html#//apple_ref/doc/uid/TP40006556-CH54-SW1)
+### 3.1 Build In Adaptivity
 iOS设备的两种orientation: **portrait**（竖屏）、**landscape**（横屏）。从iOS8开始可以使用size classes and Auto Layout使得App自适应这两种屏幕显示。
-###3.2 Provide a Great Experience in Each Environment
+### 3.2 Provide a Great Experience in Each Environment
 官方文档提供了一些guidelines来达到让你的APP在各种devices和orientation中完美适配的目的
 >* Maintain focus on the primary content in all environments.
 >* Avoid gratuitous changes in layout.
@@ -39,7 +39,7 @@ iOS设备的两种orientation: **portrait**（竖屏）、**landscape**（横屏
 （如:支持横屏的App应该考虑无论Home键在左侧还是右侧，如果用户旋转180°，App的内容也应该对应变化）
 >* If your app interprets changes in device orientation as user input, handle rotation in app-specific ways.
 
-###3.3 Use Layout to Communicate
+### 3.3 Use Layout to Communicate
 >* Make it easy to focus on the main task by elevating important content or functionality.
 
 例如将重要内容放在左上方，下面这张图说明了屏幕上不同区域重要性的不同。
@@ -54,8 +54,8 @@ iOS设备的两种orientation: **portrait**（竖屏）、**landscape**（横屏
 >* Make it easy for people to interact with content and controls by giving each interactive element ample spacing. Give tappable controls a hit target of about 44 x 44 points.
 
 (例如：搜索框右侧的叉叉按钮可点击区域的问题)
-##4 Starting and Stopping
-###4.1 Start Instantly
+## 4 Starting and Stopping
+### 4.1 Start Instantly
 用户只会花1-2分钟来决定是否继续使用App，所以千万不要像PC端一样让用户安装完还需要重启系统什么的。
 >* **As much as possible, avoid displaying a splash screen or other startup experience.**
 >* Avoid asking people to supply setup information. 
@@ -71,7 +71,7 @@ iOS设备的两种orientation: **portrait**（竖屏）、**landscape**（横屏
 >* If possible, avoid requiring users to read a disclaimer or agree to an end-user license agreement before they can do anything else.
 >* When your app restarts, restore its state so users can continue where they left off. 
 
-###4.2 Always Be Prepared to Stop
+### 4.2 Always Be Prepared to Stop
 >* An iOS app never displays a Close or Quit option. 
 >**Save user data as soon as possible and as often as reasonable**.
 >Save the current state when stopping at the finest level of detail possible. 
@@ -79,7 +79,7 @@ iOS设备的两种orientation: **portrait**（竖屏）、**landscape**（横屏
 >**If all app features are unavailable, display a screen that describes the situation and suggests a correction**.
 >If only some app features are unavailable, display either a screen or an alert when people try to use the feature.
 
-##5 [Navigation](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Navigation.html#//apple_ref/doc/uid/TP40006556-CH53-SW1)
+## 5 [Navigation](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Navigation.html#//apple_ref/doc/uid/TP40006556-CH53-SW1)
 >Your job is to implement navigation in a way that supports the structure and purpose of your app without calling attention to itself.
 (让用户尽量感知不到导航)
 
@@ -97,15 +97,15 @@ iOS设备的两种orientation: **portrait**（竖屏）、**landscape**（横屏
 >* Use a page control when each app screen represents an individual instance of the same type of item or page.
 >* **In general, it’s best to give users one path to each screen.**
 
-##6 [Modal Contexts](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Modal.html#//apple_ref/doc/uid/TP40006556-CH64-SW1)
+## 6 [Modal Contexts](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Modal.html#//apple_ref/doc/uid/TP40006556-CH64-SW1)
 一个关于Modal Context的简介图
 ![modal_intro.png](../images/modal_intro.png)
 如果不是属于这两种情况，不要使用
 >* It’s critical to get the user’s attention
 >* A self-contained task must be completed—or explicitly abandoned—to avoid leaving the user’s data in an ambiguous state
 
-##7 [Interactivity and Feedback](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/InteractivityInput.html#//apple_ref/doc/uid/TP40006556-CH55-SW1)
-###7.1 Users Know the Standard Gestures
+## 7 [Interactivity and Feedback](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/InteractivityInput.html#//apple_ref/doc/uid/TP40006556-CH55-SW1)
+### 7.1 Users Know the Standard Gestures
 常用的手势 tap, drag, and pinch，在所有App中都必须尽量保证一致，因为用户的习惯。
 这些手势的一般含义：
 
@@ -123,7 +123,7 @@ iOS设备的两种orientation: **portrait**（竖屏）、**landscape**（横屏
 >* Use complex gestures as shortcuts to expedite a task, **not as the only way to perform it**. As much as possible, **always give users a simple, straightforward way to perform an action, even if it means an extra tap or two**. Simple gestures let users focus on the experience and the content, not the interaction.（宁愿要简单动作的重复）
 >* In general, avoid defining new gestures unless your app is a game.
 
-###7.2 Interactive Elements Invite Touch
+### 7.2 Interactive Elements Invite Touch
 >the built-in apps use a variety of cues, including color, location, context, and meaningful icons and labels
 
 以Contacts为例，在某个联系人页面，可交互的控件都是蓝色的；在Calendar里，左上角的后退按钮有一个表示后退的icon还有一个title提示用户上一个页面是什么
@@ -133,23 +133,23 @@ iOS设备的两种orientation: **portrait**（竖屏）、**landscape**（横屏
 
 ![bordered_button](../images/bordered_button.png)
 
-###7.3 Feedback Aids Understanding
+### 7.3 Feedback Aids Understanding
 >* As much as possible, integrate status and other relevant feedback information into your UI.(在不干扰content的情况下展示有利于用户的反馈)
 ![mail_update](../images/mail_update.png)
 >* Avoid unnecessary alerts. **If users see too many alerts that don’t contain essential information, they quickly learn to ignore all alerts.**
 
-###7.4 Inputting Information Should Be Easy
+### 7.4 Inputting Information Should Be Easy
 >* Make it easy for users to make choices. For example, you can **use a picker or a table view instead of a text field**
 >* Get information from iOS, when appropriate.
 >* Balance a request for input by giving users something useful in return.
 
-##8 [Animation](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Animation.html#//apple_ref/doc/uid/TP40006556-CH57-SW1)
+## 8 [Animation](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/Animation.html#//apple_ref/doc/uid/TP40006556-CH57-SW1)
 >* Add animation cautiously(不必要的动画会降低性能，分散用户注意力)
 >* Use animation consistently throughout your app. 
 >* In general, strive for realism and credibility in custom animation. 例如如果使用下滑的方式展现了一个页面，就应该用上滑的方式把它隐藏回去（类似通知栏），不要尝试用继续下滑来隐藏它，这有悖用户本能的反应。
 
-##9 Color and Typography
-###9.1 Color Enhances Communication
+## 9 Color and Typography
+### 9.1 Color Enhances Communication
 >* If you create multiple custom colors, make sure they work well together. 
 >* Pay attention to color contrast in different contexts.
 >* **Be aware of color blindness.**
@@ -158,11 +158,11 @@ iOS设备的两种orientation: **portrait**（竖屏）、**landscape**（横屏
 >* Color communicates, but not always in the way you intend.**Spend time to research how your use of color might be perceived in other countries and cultures.**
 >* In most cases, don’t let color distract users. 
 
-###9.2 Text Should Always Be Legible
+### 9.2 Text Should Always Be Legible
 >* When appropriate, adjust the layout when the user chooses a different text size.
 >* In general, use a single font throughout your app. 
 
-##10 [Terminology and Wording](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/FeedbackCommunication.html#//apple_ref/doc/uid/TP40006556-CH56-SW1)
+## 10 [Terminology and Wording](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/FeedbackCommunication.html#//apple_ref/doc/uid/TP40006556-CH56-SW1)
 >* **Use terminology that you’re sure your users understand.**
 >* Use a tone that’s informal and friendly, but not too familiar. 
 >* Think like a newspaper editor, and watch out for redundant or unnecessary words.
@@ -170,9 +170,9 @@ iOS设备的两种orientation: **portrait**（竖屏）、**landscape**（横屏
 >* Take care to be accurate when describing dates.（今天、明天这样的用法会显得更亲切，但是你考虑到用户不同的时区了吗？）
 
 
-##参考文档
-###1 [苹果官方文档](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html) [中文版](http://isux.tencent.com/ios8-human-interface-guidelines.html)
-###2 [Android Design Principles（实际上是Android 4.4设计规范）](http://developer.android.com/design/get-started/principles.html) [中文版](http://www.apkbus.com/design/get-started/principles.html)
+## 参考文档
+### 1 [苹果官方文档](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/index.html) [中文版](http://isux.tencent.com/ios8-human-interface-guidelines.html)
+### 2 [Android Design Principles（实际上是Android 4.4设计规范）](http://developer.android.com/design/get-started/principles.html) [中文版](http://www.apkbus.com/design/get-started/principles.html)
  
 [Android Material Design（实际上是Android 5设计规范）]
 (http://www.google.com/design/spec/material-design/introduction.html) [中文版](http://wiki.jikexueyuan.com/project/material-design/)
