@@ -1,18 +1,18 @@
-#Notes of Using Appium&Python-Client（Mainly For iOS)
-*Written By mengting.chen*
-##1 一些官方文档参考点
-###1.1 获取需要的.app  
+#Notes of Using Appium&Python-Client（Mainly For iOS)  
+*Written By mengting.chen*  
+##1 一些官方文档参考点  
+###1.1 获取需要的.app    
 利用xcode编译获取跑case需要的.app：
 <http://appium.io/slate/en/master/?python#deploying-an-ios-app-to-a-real-device>
-###1.2 一些常见错误
+###1.2 一些常见错误  
 <http://appium.io/slate/en/master/?python#ios>
-###1.3 已知的问题
+###1.3 已知的问题  
 <http://appium.io/slate/en/master/?python#known-issues>
-##2 学习一些示例
-###2.1 官方示例
+##2 学习一些示例  
+###2.1 官方示例  
 [Appium 官方Sample Code](https://github.com/appium/sample-code/blob/master/sample-code/examples/python/)
-####2.1.1 通过sample-code中的iOS脚本学习如何获取iOS客户端控件和控件属性
-2.1.1.1 获取控件对象
+####2.1.1 通过sample-code中的iOS脚本学习如何获取iOS客户端控件和控件属性  
+2.1.1.1 获取控件对象  
 
 >以下来自sample-code/examples/python/ios_simple.py
 
