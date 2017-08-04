@@ -54,7 +54,7 @@ CI（持续集成）系统会每15分钟轮询一次代码仓库, 一旦发现Ma
 
 在2014年本人转向移动端测试之前，这一整套已经完成并持续服务至今。当时我们的监控可视化系统其实就是树莓派的主机+两个显示器，可以给大家看一张监控显示屏的效果图：
 
-![enter image description here](http://images.gitbook.cn/3a47ff50-4eba-11e7-a25c-ab368af32233)
+![enter image description here](../app_testing/images/MonitorScreen.png)
 
 * 搜索移动端团队
 
